@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            position: relative;
+            transform-style:preserve-3d ;
+            /*perspective:1500px;*/
+            /*transform: rotate3d(1,1,0,20deg);*/
+            transition: all 5s;
+            transform: rotateX(30deg) rotateY(30deg);
+        }
+        .box div {
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            line-height: 200px;
+            position: absolute;
+            top: 0;
+            left:0;
+            font-size: 30px;
+
+        }
+        .top {
+            background-color: rgba(255, 86, 77, 0.8);
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        .bottom {
+            background-color: rgba(166, 63, 255, 0.8);
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        .before {
+            background-color: rgba(53, 223, 255, 0.8);
+            transform:translateZ(100px);
+        }
+        .after {
+            background-color: rgba(183, 255, 37, 0.8);
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        .left {
+            background-color: rgba(255, 168, 22, 0.8);
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        .right {
+            background-color: rgba(255, 63, 234, 0.8);
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        .box:hover {
+            transform: rotateX(390deg) rotateY(390deg);
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="top">上面</div>
+    <div class="bottom">下面</div>
+    <div class="before">前面</div>
+    <div class="after">后面</div>
+    <div class="left">左面</div>
+    <div class="right">右面</div>
+</div>
+</body>
+</html>
